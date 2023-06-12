@@ -1,0 +1,45 @@
+1) Measure CPU usage of Snort IDS: For this, you can use a tool like top, htop, or pidstat.
+
+For example, if you want to use pidstat, you can start by finding the PID (process ID) of Snort IDS using pgrep or pidof:
+--> pidof snort
+
+Then you can use pidstat to measure the CPU usage:
+--> pidstat -u -p [PID]
+
+Replace [PID] with the process ID of Snort IDS. This command will report the CPU usage of the process every second. You can adjust the frequency by changing the number after -u.
+
+2) Measure Memory usage of Snort IDS: You can use similar tools to measure memory usage. For example, with pidstat, you can use:
+--> pidstat -r -p [PID]
+This command will report the memory usage of the process.
+
+3) Estimate Energy Usage: Once you have the CPU and memory usage, you can estimate the energy usage. This is more complex and involves a lot of factors, like the specific hardware you are using, the efficiency of your power supply, etc.
+
+For a rough estimate, you could use a formula like this:
+Power (in Watts) = CPU Usage (in %) * Max CPU Power (in Watts)
+
+The Max CPU Power is a characteristic of your specific CPU. You can find it in the technical specs of your CPU.
+
+
+TCP SYN flood attack --> hping3 -S -p 80 --flood --rand-source 192.168.1.122
+Snort statistics: runtime 21.48 mins (1111.7 seconds), 811 packets/sec, alerts 834258 (filter: count 100 TCP SYN packets per 10 sec, new_action alert timeout 120sec i.e. every 1 alert timeout for alert printing for 120sec)
+
+RPi3B+ - Snort3
+-----------------------------
+CPU usage: 
+idle --> 2.34%
+flood attack --> 10mins from 40.68% to 92.3%
+
+memory usage: 
+idle --> 8.23%
+flood attack --> 97.4% 
+
+
+RPi4 - Snort3
+-----------------------------
+CPU usage: 
+idle --> 0.17%
+flood attack --> 10mins from 0.55% to 5.6%
+
+memory usage: 
+idle --> 5.16%
+flood attack --> 25.4% 
