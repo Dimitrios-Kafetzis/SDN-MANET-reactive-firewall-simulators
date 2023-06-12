@@ -5,9 +5,13 @@ The JCPIE SDN-MANET Simulator is a Python-based tool for simulating and analyzin
 #Features
 
 Network topology creation: Create custom network topologies with different numbers of nodes and connectivity patterns. It allows the execution of mobility scenarios using ns_movement files.
+
 Routing protocol support: Implement various routing protocols, such as OLSR (Optimized Link State Routing), and evaluate their performance.
+
 Packet-level simulation: Simulate the transmission of packets between nodes, considering factors like distance, signal strength, and interference.
+
 Performance evaluation: Measure network performance metrics, such as latency and overhead, to assess the efficiency of the network.
+
 Visualization: Visualize network topologies and simulation results using graphs and plots.
 
 #Installation
