@@ -36,6 +36,6 @@ View the simulation results, including network performance metrics and visualiza
 
 ## Authors
 
-Contributors names and contact info
+Contributors names and contact info:
 
-Dimitrios Kafetzis  
+Dimitrios Kafetzis, kafetzis@aueb.gr  
